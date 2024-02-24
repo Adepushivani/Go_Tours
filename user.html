@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go Tours</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 400px;
+        }
+
+        .btn-container {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-right: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        form {
+            display: none;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form.active {
+            display: block;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        input[type="button"] {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        input[type="button"]:hover {
+            background-color: #218838;
+        }
+
+        .form-title {
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 24px;
+            text-align: center;
+            color: #333;
+        }
+
+        .form-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .form-link a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .form-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Go Tours</h1>
+</header>
+
+<main>
+    <div class="container">
+        <div class="btn-container">
+            <p>If you are a new user, please select <strong>Register</strong>. If you are already an existing user, please select <strong>Login</strong>.</p>
+           
+            <button id="registerBtn">Register</button>
+            <button id="loginBtn">Login</button>
+        </div>
+        <div id="userForm">
+            <form id="loginForm" action="login.php" method="post">
+                <h2 class="form-title">Login</h2>
+                <input type="email" name="username" placeholder="Enter username"required>
+                <input type="password" name="password" placeholder="Enter password" required>
+                <input type="button" value="Login" onclick="loginUser()">
+                <div class="form-link">
+                    <a href="#">Forgot password?</a>
+                </div>
+            </form>
+            <form id="registerForm" class="active" action="register.php" method="post">
+                <h2 class="form-title">Register</h2>
+                <input type="text" name="username" placeholder="Enter Username" required>
+                <input type="email" name="email" placeholder="Enter Email" required>
+                <input type="password" name="password" placeholder="Enter Password" required>
+                <input type="button" value="Register" onclick="registerUser()">
+            </form>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <!-- Your footer content goes here -->
+</footer>
+
+<script>
+    function loginUser() {
+        // Perform login logic here
+        // For demonstration, let's assume the login is successful
+        // Redirect to the "Book Now" page after successful login
+        window.location.href = "book.html";
+    }
+
+    function registerUser() {
+        // Perform registration logic here
+        // For demonstration, let's assume the registration is successful
+        // Redirect to the "Book Now" page after successful registration
+        window.location.href = "book.html";
+    }
+
+    document.getElementById("registerBtn").addEventListener("click", function() {
+        document.getElementById("loginForm").classList.remove("active");
+        document.getElementById("registerForm").classList.add("active");
+    });
+
+    document.getElementById("loginBtn").addEventListener("click", function() {
+        document.getElementById("registerForm").classList.remove("active");
+        document.getElementById("loginForm").classList.add("active");
+    });
+</script>
+</body>
+</html>

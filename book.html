@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Now - Go Tours</title>
+    <!-- Link to Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Link to your custom CSS files -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Link to Font Awesome -->
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <!-- Link to Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+    <!-- Additional CSS for this page -->
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f8f9fa; /* Match the background color of your index.html */
+        }
+        main {
+            padding: 50px 0;
+        }
+        .booking-form {
+            background-color: #ffffff; /* Match the background color of your index.html */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .booking-form h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333333; /* Match the color of your text in index.html */
+        }
+        .booking-form .form-group {
+            margin-bottom: 20px;
+        }
+        .booking-form label {
+            font-weight: bold;
+            color: #555555; /* Match the color of your label text in index.html */
+        }
+        .booking-form input[type="text"],
+        .booking-form input[type="email"],
+        .booking-form input[type="tel"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+        }
+        .booking-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .booking-form button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Your header content here, you can keep it similar to your other pages -->
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="booking-form">
+                <h1>Book Your Tour</h1>
+                <!-- Your booking form -->
+                <form id="booking-form" action="index.php" method="post">
+                  
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phonenumber" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="source">Source</label>
+                        <input type="text" id="source" name="source" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="destination">Destination</label>
+                        <input type="text" id="destination" name="destination" required>
+                    </div>
+                    <!-- Other form fields for tour selection, date selection, etc. -->
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <!-- Your footer content here, similar to other pages -->
+    </footer>
+
+    <!-- Link to Bootstrap JavaScript
+    <script src="js/bootstrap.min.js"></script>
+    Link to your custom JavaScript file 
+    <script src="js/book.js"></script> -->
+</body>
+</html>
